@@ -44,8 +44,6 @@ Program obs³uguje mp3 z VBR.
 %setup -q
 
 %build
-rm -f missing
-%{__gettextize}
 %{__aclocal}
 %{__autoconf}
 %{__autoheader}
