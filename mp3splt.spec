@@ -1,5 +1,5 @@
-Summary:	Tool for spliting MP3,ogg files to tracks
-Summary(pl):	Program do podzia³u plików MP3,ogg na ¶cie¿ki
+Summary:	Tool for spliting MP3, Ogg files to tracks
+Summary(pl):	Program do podzia³u plików MP3, Ogg na ¶cie¿ki
 Name:		mp3splt
 Version:	2.1
 Release:	1
@@ -17,9 +17,9 @@ BuildRequires:	libvorbis-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Mp3Splt is a command line utility to split MP3 and ogg files selecting
+Mp3Splt is a command line utility to split MP3 and Ogg files selecting
 a begin and an end time position, without decoding. It's very useful
-to split large MP3/ogg to make smaller files or to split entire albums
+to split large MP3/Ogg to make smaller files or to split entire albums
 to obtain original tracks. If you want to split an album, you can
 select split points and filenames manually or you can get them
 automatically from CDDB (internet or a local file) or from .cue files.
@@ -28,9 +28,9 @@ Otherwise if you have a file created either with Mp3Wrap or AlbumWrap
 you can extract tracks just in few seconds. Supports VBR MP3.
 
 %description -l pl
-Mp3Splt jest narzêdziem do podzia³u plików MP3 i ogg na ¶cie¿ki.
+Mp3Splt jest narzêdziem do podzia³u plików MP3 i Ogg na ¶cie¿ki.
 Dzia³a bez potrzeby dekodowania pliku. Jest bardzo przydatny do
-podzia³u du¿ych plików MP3/ogg na mniejsze pliki lub do podzia³u
+podzia³u du¿ych plików MP3/Ogg na mniejsze pliki lub do podzia³u
 ca³ego albumu w celu uzyskania poszczególnych ¶cie¿ek. W tym drugim
 przypadku mo¿liwe jest ustalenie momentów zmiany plików oraz rêczne
 b±d¼ automatyczne (pobierane z CDDB lub plików .cue) ustalanie nazw
