@@ -8,12 +8,12 @@ Group:		Applications/Multimedia
 Source0:	http://dl.sourceforge.net/mp3splt/%{name}-%{version}-src.tar.gz
 # Source0-md5:	c3830bc7f98d344ad371a5e1a7acc91e
 URL:		http://mp3splt.sourceforge.net/
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libmad-devel
 BuildRequires:	libogg-devel
+BuildRequires:	libtool
 BuildRequires:	libvorbis-devel
-BuildRequires:	mad-devel
-Requires:	libogg
-Requires:	libvorbis
-Requires:	mad
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -34,11 +34,11 @@ podzia³u du¿ych plików mp3/ogg na mniejsze pliki lub do podzia³u
 ca³ego albumu w celu uzyskania poszczególnych ¶cie¿ek. W tym drugim
 przypadku mo¿liwe jest ustalenie momentów zmiany plików oraz rêczne
 b±d¼ automatyczne (pobierane z CDDB lub plików .cue) ustalanie nazw
-plikow.
+plików.
 
 Je¶li posiadasz plik stworzony za pomoc± Mp3Wrap lub AlbumWrap, mo¿esz
 wydobyæ poszczególne ¶cie¿ki w przeci±gu zaledwie kilku sekund.
-Wspiera VBR mp3.
+Program obs³uguje mp3 z VBR.
 
 %prep
 %setup -q
@@ -64,6 +64,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS ChangeLog NEWS README ABOUT-NLS
+%doc AUTHORS ChangeLog NEWS README
 %attr(755,root,root) %{_bindir}/*
-%{_mandir}/man1
+%{_mandir}/man1/*
