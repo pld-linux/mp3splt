@@ -1,0 +1,11 @@
+--- mp3splt-2.1c/splt.h.orig	2005-03-26 14:52:38.000000000 +0100
++++ mp3splt-2.1c/splt.h	2005-05-26 10:46:45.969669664 +0200
+@@ -93,7 +93,7 @@
+ 
+ char *zero_pad_float (float f, char *out);
+ 
+-int parse_outformat(char *s, char format[][], int cddboption);
++int parse_outformat(char *s, char format[OUTNUM][MAXOLEN], int cddboption);
+ 
+ unsigned char *cleanstring (unsigned char *s);
+ 
