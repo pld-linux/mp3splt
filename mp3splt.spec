@@ -7,6 +7,7 @@ License:	GPL
 Group:		Applications/Multimedia
 Source0:	http://dl.sourceforge.net/mp3splt/%{name}-%{version}-src.tar.gz
 # Source0-md5:	b355835e4d57b8b921a14a6485244c87
+Patch0:		%{name}-gcc4.patch
 URL:		http://mp3splt.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -42,6 +43,7 @@ Program obs³uguje MP3 z VBR.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %{__aclocal}
