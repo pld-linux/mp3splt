@@ -1,5 +1,5 @@
 Summary:	Tool for spliting MP3, Ogg files to tracks
-Summary(pl):	Program do podzia³u plików MP3, Ogg na ¶cie¿ki
+Summary(pl.UTF-8):   Program do podziaÅ‚u plikÃ³w MP3, Ogg na Å›cieÅ¼ki
 Name:		mp3splt
 Version:	2.1c
 Release:	1
@@ -28,18 +28,18 @@ automatically from CDDB (internet or a local file) or from .cue files.
 Otherwise if you have a file created either with Mp3Wrap or AlbumWrap
 you can extract tracks just in few seconds. Supports VBR MP3.
 
-%description -l pl
-Mp3Splt jest narzêdziem do podzia³u plików MP3 i Ogg na ¶cie¿ki.
-Dzia³a bez potrzeby dekodowania pliku. Jest bardzo przydatny do
-podzia³u du¿ych plików MP3/Ogg na mniejsze pliki lub do podzia³u
-ca³ego albumu w celu uzyskania poszczególnych ¶cie¿ek. W tym drugim
-przypadku mo¿liwe jest ustalenie momentów zmiany plików oraz rêczne
-b±d¼ automatyczne (pobierane z CDDB lub plików .cue) ustalanie nazw
-plików.
+%description -l pl.UTF-8
+Mp3Splt jest narzÄ™dziem do podziaÅ‚u plikÃ³w MP3 i Ogg na Å›cieÅ¼ki.
+DziaÅ‚a bez potrzeby dekodowania pliku. Jest bardzo przydatny do
+podziaÅ‚u duÅ¼ych plikÃ³w MP3/Ogg na mniejsze pliki lub do podziaÅ‚u
+caÅ‚ego albumu w celu uzyskania poszczegÃ³lnych Å›cieÅ¼ek. W tym drugim
+przypadku moÅ¼liwe jest ustalenie momentÃ³w zmiany plikÃ³w oraz rÄ™czne
+bÄ…dÅº automatyczne (pobierane z CDDB lub plikÃ³w .cue) ustalanie nazw
+plikÃ³w.
 
-Je¶li posiadasz plik stworzony za pomoc± Mp3Wrap lub AlbumWrap, mo¿esz
-wydobyæ poszczególne ¶cie¿ki w przeci±gu zaledwie kilku sekund.
-Program obs³uguje MP3 z VBR.
+JeÅ›li posiadasz plik stworzony za pomocÄ… Mp3Wrap lub AlbumWrap, moÅ¼esz
+wydobyÄ‡ poszczegÃ³lne Å›cieÅ¼ki w przeciÄ…gu zaledwie kilku sekund.
+Program obsÅ‚uguje MP3 z VBR.
 
 %prep
 %setup -q
