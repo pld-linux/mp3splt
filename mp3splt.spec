@@ -1,5 +1,5 @@
 Summary:	Tool for spliting MP3, Ogg files to tracks
-Summary(pl.UTF-8):   Program do podziału plików MP3, Ogg na ścieżki
+Summary(pl.UTF-8):	Program do podziału plików MP3, Ogg na ścieżki
 Name:		mp3splt
 Version:	2.1c
 Release:	1
