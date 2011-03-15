@@ -1,20 +1,18 @@
 Summary:	Tool for spliting MP3, Ogg files to tracks
 Summary(pl.UTF-8):	Program do podziału plików MP3, Ogg na ścieżki
 Name:		mp3splt
-Version:	2.1c
+Version:	2.3a
 Release:	1
 License:	GPL
 Group:		Applications/Multimedia
-Source0:	http://dl.sourceforge.net/mp3splt/%{name}-%{version}-src.tar.gz
-# Source0-md5:	b355835e4d57b8b921a14a6485244c87
-Patch0:		%{name}-gcc4.patch
+Source0:	http://downloads.sourceforge.net/mp3splt/%{name}-%{version}.tar.gz
+# Source0-md5:	1fe663f7de5a6949bbe5b6aa78fea79f
 URL:		http://mp3splt.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	libmad-devel
-BuildRequires:	libogg-devel
+BuildRequires:	gettext-devel
+BuildRequires:	libmp3splt-devel >= 0.6.1a
 BuildRequires:	libtool
-BuildRequires:	libvorbis-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -43,14 +41,15 @@ Program obsługuje MP3 z VBR.
 
 %prep
 %setup -q
-%patch0 -p1
 
 %build
-%{__aclocal}
+%{__gettextize}
+%{__aclocal} -Im4
 %{__autoconf}
 %{__autoheader}
 %{__automake}
-%configure
+%configure \
+	--enable-oggsplt_symlink
 %{__make}
 
 %install
@@ -59,11 +58,15 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+%find_lang %{name}
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files
+%files -f %{name}.lang
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README
-%attr(755,root,root) %{_bindir}/*
-%{_mandir}/man1/*
+%attr(755,root,root) %{_bindir}/mp3splt
+%attr(755,root,root) %{_bindir}/oggsplt
+%{_mandir}/man1/mp3splt.1*
+%{_mandir}/man1/oggsplt.1*
