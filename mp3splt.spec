@@ -2,7 +2,7 @@ Summary:	Tool for spliting MP3, Ogg files to tracks
 Summary(pl.UTF-8):	Program do podziału plików MP3, Ogg na ścieżki
 Name:		mp3splt
 Version:	2.3a
-Release:	1
+Release:	2
 License:	GPL
 Group:		Applications/Multimedia
 Source0:	http://downloads.sourceforge.net/mp3splt/%{name}-%{version}.tar.gz
@@ -13,6 +13,7 @@ BuildRequires:	automake
 BuildRequires:	gettext-devel
 BuildRequires:	libmp3splt-devel >= 0.6.1a
 BuildRequires:	libtool
+BuildRequires:	sed >= 4.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -41,6 +42,10 @@ Program obsługuje MP3 z VBR.
 
 %prep
 %setup -q
+sed -i -e 's/fr_FR/fr/;s/de_DE/de/' po/LINGUAS
+mv po/fr_FR.po po/fr.po
+mv po/de_DE.po po/de.po
+%{__rm} po/stamp-po
 
 %build
 %{__gettextize}
