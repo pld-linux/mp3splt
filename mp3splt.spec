@@ -10,7 +10,7 @@ Source0:	http://downloads.sourceforge.net/mp3splt/%{name}-%{version}.tar.gz
 URL:		http://mp3splt.sourceforge.net/
 BuildRequires:	autoconf >= 2.56
 BuildRequires:	automake
-BuildRequires:	gettext-devel >= 0.18.3
+BuildRequires:	gettext-tools >= 0.18.3
 BuildRequires:	libmp3splt-devel >= 0.9.0
 BuildRequires:	libtool
 BuildRequires:	sed >= 4.0
